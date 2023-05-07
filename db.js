@@ -1,9 +1,8 @@
 const mongoose = require("mongoose");
 mongoose.set("strictQuery", true);
-
+require("dotenv").config();
 // here i can create the new folder name "inotebook" inside of "mongodb compass"
-const mongoUri =
-  "mongodb://127.0.0.1:27017/inotebook?readPreference=primary&appname=MonogoDB%20Compass&directConnection=true&tls=false";
+const mongoUri = process.env.MONGO_URL;
 const connectToMongo = () => {
   mongoose.connect(mongoUri, () => {
     console.log("mongoose Uri connected successfully");
