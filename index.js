@@ -7,7 +7,7 @@ var cors = require("cors");
 connectToMongo();
 const app = express();
 // Step-1 When i'll imPORT of this code in render.com than i'll give a PORT is this and go below Step-2
-const PORT = process.env.PORT_HOST || 9090;
+const PORT = process.env.PORT_HOST || 8080;
 // const PORT = 5000;
 
 // 2 this  code is "npm install cors for server use api"
